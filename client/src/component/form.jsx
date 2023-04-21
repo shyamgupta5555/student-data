@@ -1,6 +1,7 @@
 import React, { useState, createContext } from "react";
 import axios from "axios";
 import { Data } from "./dataStudent";
+import { api } from "./api";
 
 export const studentContext = React.createContext({});
 
@@ -22,7 +23,7 @@ export function From() {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/student", obj)
+      .post("/student", obj)
       .then((res) => {
         setInput(res.data.data);
         window.alert("successfully create");

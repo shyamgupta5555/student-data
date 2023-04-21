@@ -1,6 +1,7 @@
 import React, { useEffect, useState ,useContext } from "react";
 import axios from "axios";
 import { studentContext } from "./form";
+import { api } from "./api";
 
 export function Data() {
   const [allDetails, setDetails] = useState([]);
@@ -8,8 +9,8 @@ export function Data() {
 const {input } = useContext(studentContext)
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/student")
+    api
+      .get("/student")
       .then((res) => {
         console.log(res.data.data);
         setDetails(res.data.data);

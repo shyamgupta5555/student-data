@@ -20,6 +20,6 @@ app.listen(5000 , (err)=>{
 })
 
 app.get("*", (req, res) => {
-  const files = path.join(__dirname, "../build/index.html");
-  res.sendFile(files);
+  const file = path.join(__dirname, "../build/index.html");
+  res.sendFile(file);
 });
