@@ -1,7 +1,6 @@
 import React, { useEffect, useState ,useContext } from "react";
-import axios from "axios";
 import { studentContext } from "./form";
-import { api } from "./api";
+import { api } from "./api"
 
 export function Data() {
   const [allDetails, setDetails] = useState([]);

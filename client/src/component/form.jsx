@@ -23,7 +23,7 @@ export function From() {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("/student", obj)
+      .post("/api/student", obj)
       .then((res) => {
         setInput(res.data.data);
         window.alert("successfully create");
