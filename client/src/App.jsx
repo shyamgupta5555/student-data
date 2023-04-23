@@ -7,12 +7,7 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<From/>}></Route>
-      </Routes>
-      </BrowserRouter>
-      
+      <From/>
     
     </div>
   )

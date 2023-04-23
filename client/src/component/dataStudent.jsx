@@ -7,6 +7,7 @@ export function Data() {
 
 const {input } = useContext(studentContext)
 
+
   useEffect(() => {
     api
       .get("/student")
@@ -32,8 +33,8 @@ const {input } = useContext(studentContext)
           </tr>
         </thead>
         <tbody>
-          {allDetails.map((user, index) => {
-            return (
+          {allDetails.map(user=> {
+            return(
               <tr>
                 <td>{user.fullName}</td>
                 <td>{user.age}</td>
@@ -41,7 +42,7 @@ const {input } = useContext(studentContext)
                 <td>{user.email}</td>
                 <td>{user.qualification}</td>
               </tr>
-            );
+            )
           })}
         </tbody>
       </table>
