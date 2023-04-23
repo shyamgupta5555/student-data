@@ -22,7 +22,7 @@ export function From() {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    axios
+    api
       .post("/student", obj)
       .then((res) => {
         setInput(res.data.data);

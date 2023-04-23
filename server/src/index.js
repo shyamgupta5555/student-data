@@ -1,12 +1,12 @@
 const express =require("express")
 const mongoose = require("mongoose")
-const app = express();
 const cors = require("cors");
-const route = require("../src/route");
 const path = require("path");
+const app = express();
+const route = require("../src/route");
+app.use(express.json());
 
 app.use(cors());
-app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "../dist")));
 
@@ -22,6 +22,7 @@ mongoose
   });
 
 app.use("/", route);
+
 app.listen(5000, (err) => {
   if (err) {
     console.log(err.message);
